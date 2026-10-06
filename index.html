@@ -1,8 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="booting">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+  if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+  }
+  window.scrollTo(0, 0);
+</script>
 <title>SLSG Infosystems Pvt. Ltd. — Enterprise Technology &amp; Business Transformation Partner</title>
 <meta name="description" content="SLSG Infosystems Pvt. Ltd. — Winner of Emerging Enterprise of the Year 2026. Enterprise IT Infrastructure, Cloud, Security, Workforce Mobility, and E-Waste solutions across India.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,6 +35,7 @@
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; overflow-x: hidden; width: 100%; }
+  html.booting { scroll-behavior: auto !important; }
   body { font-family: 'DM Sans', sans-serif; background: var(--dark); color: var(--text); overflow-x: hidden; width: 100%; max-width: 100%; cursor: default; }
 
   ::-webkit-scrollbar { width: 5px; }
@@ -339,6 +346,30 @@
   .form-group.has-error label {
     color: #e25c5c !important;
   }
+  .form-group input[type="file"] {
+    padding: 10px 14px;
+    font-size: 13px;
+    color: var(--muted);
+    cursor: pointer;
+  }
+  .form-group input[type="file"]::file-selector-button {
+    background: var(--dark3);
+    border: 1px solid var(--border);
+    color: var(--accent);
+    padding: 6px 14px;
+    border-radius: 3px;
+    margin-right: 12px;
+    cursor: pointer;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: background 0.2s, border-color 0.2s;
+  }
+  .form-group input[type="file"]::file-selector-button:hover {
+    background: var(--dark4);
+    border-color: var(--accent);
+  }
   .form-alert {
     padding: 12px 16px;
     border-radius: 4px;
@@ -592,21 +623,21 @@
         <a href="#contact" class="btn-outline">Get in Touch</a>
       </div>
     </div>
-    <div class="hero-stats">
+    <div class="hero-stats" id="heroStats">
       <div class="hero-stat">
-        <div class="hero-stat-num">Pan India</div>
+        <div class="hero-stat-num" data-type="text" data-target="Pan India">Pan India</div>
         <div class="hero-stat-label">Delivery &amp; Reach</div>
       </div>
       <div class="hero-stat">
-        <div class="hero-stat-num">100%</div>
+        <div class="hero-stat-num" data-type="num" data-target="100" data-suffix="%">100%</div>
         <div class="hero-stat-label">Quality Tested Hardware</div>
       </div>
       <div class="hero-stat">
-        <div class="hero-stat-num">360°</div>
+        <div class="hero-stat-num" data-type="num" data-target="360" data-suffix="°">360°</div>
         <div class="hero-stat-label">Solution Breadth</div>
       </div>
       <div class="hero-stat">
-        <div class="hero-stat-num">Lifetime</div>
+        <div class="hero-stat-num" data-type="text" data-target="Lifetime">Lifetime</div>
         <div class="hero-stat-label">Maintenance Support</div>
       </div>
     </div>
@@ -616,7 +647,7 @@
 <!-- Award Banner Strip -->
 <div class="award-banner">
   <div class="award-banner-star">&#9733;</div>
-  <span>Proud Winner: Emerging Enterprise of the Year 2026 — Global RISE Awards (By SMBConnect in association with DCCIA Pune)</span>
+  <span>Proud Winner: Emerging Enterprise of the Year 2026 — Global RISE Awards (By SMB Connect in association with DCCIA Pune)</span>
   <a href="#awards">View Milestone &rarr;</a>
 </div>
 
@@ -646,7 +677,7 @@
       </li>
       <li class="glance-item">
         <strong>Strategic Alliances</strong>
-        <span>Authorised Services Partners of major global Tech OEMs</span>
+        <span>Authorised Services Partners of major global Tech OEMs and Service Providers</span>
       </li>
       <li class="glance-item">
         <strong>Quality Commitment</strong>
@@ -826,7 +857,7 @@
   <div class="award-highlight reveal">
     <div class="award-header-badge">&#127942; Global RISE Awards 2026</div>
     <div class="award-title-main">Emerging Enterprise of the Year 2026</div>
-    <div class="award-venue">Conferred at Four Points by Sheraton, Pune on 21st August 2026 by SMBConnect / The Rise in association with DCCIA Pune.</div>
+    <div class="award-venue">Conferred at Four Points by Sheraton, Pune on 21st August 2026 by SMB Connect / The Rise in association with DCCIA Pune.</div>
 
     <div class="award-pillars">
       <div class="pillar-card">
@@ -850,7 +881,7 @@
       <img src="assets/awards/award-ceremony.jpg" alt="Award Ceremony at Four Points by Sheraton">
       <div class="gallery-overlay">
         <span>Award Ceremony</span>
-        <small>Conferred by SMBConnect &amp; DCCIA Pune</small>
+        <small>Conferred by SMB Connect &amp; DCCIA Pune</small>
       </div>
     </div>
     <div class="gallery-item" onclick="openModal('assets/awards/award-stage.jpg', 'Leadership Team Receiving the Emerging Enterprise of the Year 2026 Trophy')">
@@ -908,7 +939,7 @@
     <div class="why-card">
       <div class="why-num">05</div>
       <div class="why-title">Strong Partner Ecosystem</div>
-      <div class="why-desc">Direct authorised alliances with Tata Communications, Yotta, HPE, Zebra, PeopleLink, SonicWall, Staqo, Honeywell, and Ingram Micro.</div>
+      <div class="why-desc">Direct authorised alliances with Tata Communications, Yotta, HPE, Zebra, PeopleLink, SonicWall, Staqo, Techknowgreen Solutions, and Ingram Micro.</div>
     </div>
     <div class="why-card">
       <div class="why-num">06</div>
@@ -1289,31 +1320,31 @@
       </div>
     </div>
 
-    <!-- 4. Honeywell Technologies -->
+    <!-- 4. Techknowgreen Solutions -->
     <div class="partner-card" data-category="industry-solutions">
       <div class="partner-top">
-        <div class="partner-logo-box">
-          <img src="assets/partners/honeywell.png" alt="Honeywell Technologies">
+        <div class="partner-logo-box" style="background:#072e17; border: 1px solid rgba(201,168,76,0.25);">
+          <img src="assets/partners/techknowgreen.png" alt="Techknowgreen Solutions Limited">
         </div>
         <span class="partner-vertical-tag">Industry Solutions</span>
       </div>
-      <div class="partner-name">Honeywell Technologies</div>
-      <div class="partner-lob">Process automation, enterprise mobility &amp; industrial sensor technology engineered for mission-critical operations.</div>
+      <div class="partner-name">Techknowgreen Solutions</div>
+      <div class="partner-lob">Environmental compliance, sustainability consulting, turnkey clean-tech infrastructure &amp; specialized IT software solutions across India.</div>
       <button class="partner-toggle-btn" onclick="toggleOfferings(this)">
         <span>View Product Offerings</span> &darr;
       </button>
       <div class="partner-offerings">
         <div class="offering-group">
-          <strong>Automation &amp; Mobility:</strong>
-          <span>Rugged mobile computers, handheld barcode scanners, industrial printers, RFID systems</span>
+          <strong>1. Consulting (Regulatory &amp; Sustainability):</strong>
+          <span>Environmental Impact Assessment (EIA) &amp; EC Clearances (NABET approved), ESG &amp; Climate Change (SEBI BRSR compliance, lifecycle analysis, carbon neutrality), Environmental compliance &amp; licensing (PESO, Fire NOC, Factory Licenses, CGWA), Extended Producer Responsibility (EPR) &amp; hazardous waste management, Environmental due diligence &amp; contaminated site remediation, Detailed Project Reports (DPR) &amp; turnkey engineering design for STPs, ETPs, WTPs &amp; SWM, Environmental audits &amp; compliance investigations.</span>
         </div>
         <div class="offering-group">
-          <strong>Safety Solutions:</strong>
-          <span>Industrial PPE, certified fall protection systems, respiratory safety gear</span>
+          <strong>2. Technology (Execution &amp; Info Tech):</strong>
+          <span>Turnkey clean-tech infrastructure deployment (STPs, ETPs, Zero Liquid Discharge [ZLD] systems, air pollution control), Proprietary hardware (Yuka Yantra ambient/indoor air purification &amp; circular economic wetland technologies for wastewater), Environmental IT software &amp; applications (KYC - Know Your Compliance regulatory app, ROCO footprint carbon reduction app, Intelligent Decision Support Systems [IDSS] &amp; IoT environmental data interfaces).</span>
         </div>
         <div class="offering-group">
-          <strong>Sensing Technologies:</strong>
-          <span>Industrial process sensors, healthcare instrumentation &amp; aerospace precision sensors</span>
+          <strong>3. Research (Policy &amp; Engineering):</strong>
+          <span>Advanced engineering R&amp;D (nature-based solutions &amp; advanced oxidation processes), Climate change studies (Carbon Capture, Utilization &amp; Storage [CCUS], blue carbon modelling &amp; climate resilience), AI, Big Data &amp; Robotics for environmental surveillance and automated compliance monitoring, Policy research analysis (cost-benefit analyses, social impact assessments, alternative fuels), Carbon credit market &amp; carbon offset trading advisory.</span>
         </div>
       </div>
     </div>
@@ -1629,10 +1660,6 @@
       <div class="client-name">Enterprise Technology Client</div>
     </div>
 
-    <div class="client-card">
-      <div class="client-logo-box"><img src="assets/clients/trst01.png" alt="TRST01"></div>
-      <div class="client-name">TRST01</div>
-    </div>
 
   </div>
 </section>
@@ -1656,7 +1683,7 @@
       <div class="location-contact">
         <div class="contact-item">
           <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>
-          <a href="tel:+912046035505">+91 20-46035505</a> &nbsp;|&nbsp; <a href="tel:+919763034875">+91 9763034875</a>
+          <span><a href="tel:+919570495256">+91 9570495256</a> (Anil Kumar) &nbsp;|&nbsp; <a href="tel:+912046035505">+91 20-46035505</a> &nbsp;|&nbsp; <a href="tel:+919763034875">+91 9763034875</a> (Ashok Srivastava)</span>
         </div>
         <div class="contact-item">
           <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
@@ -1681,11 +1708,11 @@
       <div class="location-contact">
         <div class="contact-item">
           <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>
-          <a href="tel:+919570495256">+91 9570495256</a> &nbsp;|&nbsp; <a href="tel:+919763034875">+91 9763034875</a>
+          <span><a href="tel:+919763034875">+91 9763034875</a> (Ashok Srivastava)</span>
         </div>
         <div class="contact-item">
           <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
-          <a href="mailto:anil@slsginfosystem.com">anil@slsginfosystem.com</a>
+          <a href="mailto:contact@slsginfosystem.com">contact@slsginfosystem.com</a>
         </div>
         <div class="contact-item">
           <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3"/></svg>
@@ -1703,30 +1730,36 @@
     <h2 class="section-title">Let's Build Your <em>Enterprise Roadmap</em></h2>
     <p class="section-desc">From IT infrastructure to cloud, cybersecurity, workforce mobility, and sustainability — talk to our leadership team about your next enterprise requirement.</p>
 
-    <form class="contact-form" id="contactForm" onsubmit="event.preventDefault(); handleSubmit();" novalidate>
+    <form class="contact-form" id="contactForm" action="https://formsubmit.co/contact@slsginfosystem.com" method="POST" enctype="multipart/form-data" onsubmit="event.preventDefault(); handleSubmit();" novalidate>
+      <!-- FormSubmit Routing & Styling Configuration -->
+      <input type="hidden" name="_subject" value="New SLSG Enterprise Roadmap Enquiry">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" value="https://slsginfosystem.com/#contact">
+
       <div class="form-row">
         <div class="form-group" id="groupName">
           <label for="formName">Full Name *</label>
-          <input type="text" id="formName" name="name" placeholder="Your full name" required>
+          <input type="text" id="formName" name="Full_Name" placeholder="Your full name" required>
         </div>
         <div class="form-group" id="groupCompany">
           <label for="formCompany">Company / Organization *</label>
-          <input type="text" id="formCompany" name="company" placeholder="Your company name" required>
+          <input type="text" id="formCompany" name="Company_Name" placeholder="Your company name" required>
         </div>
       </div>
       <div class="form-row">
         <div class="form-group" id="groupEmail">
           <label for="formEmail">Email Address *</label>
-          <input type="email" id="formEmail" name="email" placeholder="you@company.com" required>
+          <input type="email" id="formEmail" name="Email_Address" placeholder="you@company.com" required>
         </div>
         <div class="form-group" id="groupPhone">
           <label for="formPhone">Phone Number *</label>
-          <input type="tel" id="formPhone" name="phone" placeholder="+91 00000 00000" required>
+          <input type="tel" id="formPhone" name="Phone_Number" placeholder="+91 00000 00000" required>
         </div>
       </div>
       <div class="form-group" id="groupService">
         <label for="formService">Service Portfolio of Interest *</label>
-        <select id="formService" name="service" required>
+        <select id="formService" name="Service_Portfolio" required>
           <option value="" disabled selected>Select a business portfolio</option>
           <option value="Digital &amp; Cloud Transformation">Digital &amp; Cloud Transformation</option>
           <option value="Security &amp; Compliance">Security &amp; Compliance</option>
@@ -1740,7 +1773,11 @@
       </div>
       <div class="form-group" id="groupMessage">
         <label for="formMessage">Your Message / Requirements *</label>
-        <textarea id="formMessage" name="message" placeholder="Describe your technical requirements, deployment scale, or timeline..." required></textarea>
+        <textarea id="formMessage" name="Requirements_Message" placeholder="Describe your technical requirements, deployment scale, or timeline..." required></textarea>
+      </div>
+      <div class="form-group" id="groupAttachment">
+        <label for="formAttachment">Upload Document / RFP / Specification (Optional)</label>
+        <input type="file" id="formAttachment" name="Attachment" accept="image/png, image/jpeg, application/pdf, .doc, .docx, .xls, .xlsx, .zip">
       </div>
       <div id="formAlert" class="form-alert" style="display:none;"></div>
       <button type="submit" id="submitBtn" class="btn-primary" style="width:fit-content">
@@ -1759,11 +1796,10 @@
           <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>
         </div>
         <div class="info-card-text">
-          <strong>Phone Lines</strong>
+          <strong>Direct Phone Lines</strong>
           <span>
-            <a href="tel:+912046035505">+91 20-46035505</a> &nbsp;|&nbsp;
-            <a href="tel:+919763034875">+91 9763034875</a> &nbsp;|&nbsp;
-            <a href="tel:+919570495256">+91 9570495256</a>
+            <a href="tel:+919570495256">+91 9570495256</a> (Anil Kumar) &nbsp;|&nbsp; <a href="tel:+912046035505">+91 20-46035505</a><br>
+            <a href="tel:+919763034875">+91 9763034875</a> (Ashok Srivastava)
           </span>
         </div>
       </div>
@@ -1841,7 +1877,7 @@
         <li><a href="#partners">Ingram Micro</a></li>
         <li><a href="#partners">Hewlett Packard Enterprise</a></li>
         <li><a href="#partners">Zebra Technologies</a></li>
-        <li><a href="#partners">Honeywell Technologies</a></li>
+        <li><a href="#partners">Techknowgreen Solutions</a></li>
         <li><a href="#partners">PeopleLink &amp; SonicWall</a></li>
         <li><a href="#partners">Staqo Enterprise</a></li>
       </ul>
@@ -1868,6 +1904,104 @@
 </footer>
 
 <script>
+  // Page Boot Scroll Restoration & Reset (Prevents mobile auto-scroll to middle)
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      document.documentElement.classList.remove('booting');
+    }, 250);
+
+    if (!window.location.hash) {
+      window.scrollTo(0, 0);
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+    }
+  });
+
+  document.addEventListener('DOMContentLoaded', () => {
+    if (!window.location.hash) {
+      window.scrollTo(0, 0);
+    }
+  });
+
+  // Hero Stats Number Loading & Ticker Animation
+  function animateHeroStats() {
+    const statsContainer = document.getElementById('heroStats');
+    if (!statsContainer || statsContainer.dataset.animated === 'true') return;
+    statsContainer.dataset.animated = 'true';
+
+    const statElements = statsContainer.querySelectorAll('.hero-stat-num');
+    statElements.forEach((el, index) => {
+      const type = el.getAttribute('data-type');
+      const target = el.getAttribute('data-target');
+      const suffix = el.getAttribute('data-suffix') || '';
+
+      if (type === 'num') {
+        const targetNum = parseInt(target, 10);
+        const duration = 1600;
+        const startTime = performance.now();
+
+        function updateNum(now) {
+          const elapsed = now - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+          const easeOut = 1 - Math.pow(1 - progress, 3);
+          const currentVal = Math.round(targetNum * easeOut);
+          el.textContent = currentVal + suffix;
+          if (progress < 1) {
+            requestAnimationFrame(updateNum);
+          } else {
+            el.textContent = targetNum + suffix;
+          }
+        }
+        requestAnimationFrame(updateNum);
+      } else {
+        const finalStr = target;
+        const duration = 1100 + index * 150;
+        const startTime = performance.now();
+        const chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+        function updateTicker(now) {
+          const elapsed = now - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+
+          if (progress < 1) {
+            const resolvedCount = Math.floor(progress * finalStr.length);
+            let display = finalStr.substring(0, resolvedCount);
+            for (let i = resolvedCount; i < finalStr.length; i++) {
+              if (finalStr[i] === ' ') {
+                display += ' ';
+              } else {
+                display += chars[Math.floor(Math.random() * chars.length)];
+              }
+            }
+            el.textContent = display;
+            requestAnimationFrame(updateTicker);
+          } else {
+            el.textContent = finalStr;
+          }
+        }
+        requestAnimationFrame(updateTicker);
+      }
+    });
+  }
+
+  // Trigger Hero Stats animation when in view
+  if ('IntersectionObserver' in window) {
+    const heroStatsEl = document.getElementById('heroStats');
+    if (heroStatsEl) {
+      const statsObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            animateHeroStats();
+            statsObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+      statsObserver.observe(heroStatsEl);
+    }
+  } else {
+    window.addEventListener('load', animateHeroStats);
+  }
+
   // Navbar Scrolled State
   const navbar = document.getElementById('navbar');
   window.addEventListener('scroll', () => {
@@ -1934,7 +2068,7 @@
     document.getElementById('imageModal').classList.remove('active');
   }
 
-  // Form Submission Validation & Handling
+  // Form Submission Validation & Handling via FormSubmit
   function handleSubmit() {
     const form = document.getElementById('contactForm');
     const alertBox = document.getElementById('formAlert');
@@ -1975,27 +2109,51 @@
       return false;
     }
 
-    // All fields are valid
-    alertBox.className = 'form-alert success';
-    alertBox.innerHTML = '<strong>Enquiry Transmitted Successfully!</strong><br>Thank you for reaching out. An SLSG enterprise specialist will connect with you promptly.';
-    alertBox.style.display = 'block';
-
+    // All fields are valid -> Transmit via FormSubmit
     const origText = submitBtn.innerHTML;
     submitBtn.disabled = true;
-    submitBtn.innerHTML = '✓ Enquiry Transmitted';
-    submitBtn.style.background = 'linear-gradient(135deg, #245038, #2d7a4f)';
-    submitBtn.style.opacity = '1';
+    submitBtn.innerHTML = 'Transmitting to SLSG...';
+    submitBtn.style.opacity = '0.8';
 
-    form.reset();
+    const formData = new FormData(form);
 
-    setTimeout(() => {
-      submitBtn.disabled = false;
-      submitBtn.innerHTML = origText;
-      submitBtn.style.background = '';
+    fetch('https://formsubmit.co/ajax/contact@slsginfosystem.com', {
+      method: 'POST',
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    })
+    .then(res => {
+      if (res.ok) {
+        return res.json();
+      }
+      throw new Error('Network response not ok');
+    })
+    .then(data => {
+      alertBox.className = 'form-alert success';
+      alertBox.innerHTML = '<strong>Enquiry Transmitted Successfully!</strong><br>Thank you for reaching out. Your enquiry has been routed to <em>contact@slsginfosystem.com</em> and an SLSG specialist will connect with you promptly.';
+      alertBox.style.display = 'block';
+
+      submitBtn.innerHTML = '✓ Enquiry Transmitted';
+      submitBtn.style.background = 'linear-gradient(135deg, #245038, #2d7a4f)';
+      submitBtn.style.opacity = '1';
+
+      form.reset();
+
       setTimeout(() => {
-        alertBox.style.display = 'none';
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = origText;
+        submitBtn.style.background = '';
+        setTimeout(() => {
+          alertBox.style.display = 'none';
+        }, 5000);
       }, 4000);
-    }, 3500);
+    })
+    .catch(err => {
+      // Fallback to standard FormSubmit submission
+      form.submit();
+    });
 
     return false;
   }
