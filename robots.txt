@@ -1,0 +1,8 @@
+# Robots.txt for SLSG Infosystems Pvt. Ltd.
+# Official Website: https://slsginfosystem.com
+
+User-agent: *
+Allow: /
+
+# XML Sitemap Location
+Sitemap: https://slsginfosystem.com/sitemap.xml
