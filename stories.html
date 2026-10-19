@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" class="booting">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+  // Apply the theme before the first paint, including on repeat visits.
+  try {
+    const savedTheme = localStorage.getItem('slsg-theme');
+    document.documentElement.dataset.theme = savedTheme === 'dark' || savedTheme === 'light'
+      ? savedTheme
+      : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  } catch {
+    document.documentElement.dataset.theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+  if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+  }
+  window.scrollTo(0, 0);
+</script>
+<title>Enterprise IT Insights &amp; Company Stories | SLSG Infosystems</title>
+<meta name="description" content="Read SLSG company stories and practical guides to enterprise IT planning, technology roadmaps and hardware lifecycle management.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles/base.css">
+<link rel="stylesheet" href="assets/styles/theme.css">
+<link rel="canonical" href="https://slsginfosystem.com/stories.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SLSG Infosystems">
+<meta property="og:title" content="Enterprise IT Insights &amp; Company Stories | SLSG Infosystems">
+<meta property="og:description" content="Read SLSG company stories and practical guides to enterprise IT planning, technology roadmaps and hardware lifecycle management.">
+<meta property="og:url" content="https://slsginfosystem.com/stories.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Enterprise IT Insights &amp; Company Stories | SLSG Infosystems">
+<meta name="twitter:description" content="Read SLSG company stories and practical guides to enterprise IT planning, technology roadmaps and hardware lifecycle management.">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "CollectionPage", "@id": "https://slsginfosystem.com/stories.html#webpage", "url": "https://slsginfosystem.com/stories.html", "name": "Enterprise IT Insights & Company Stories | SLSG Infosystems", "description": "Read SLSG company stories and practical guides to enterprise IT planning, technology roadmaps and hardware lifecycle management.", "inLanguage": "en", "isPartOf": {"@id": "https://slsginfosystem.com/#website"}, "publisher": {"@id": "https://slsginfosystem.com/#organization"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://slsginfosystem.com/"}, {"@type": "ListItem", "position": 2, "name": "Stories & insights", "item": "https://slsginfosystem.com/stories.html"}]}]}</script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<nav id="navbar">
+  <a href="index.html#home" class="nav-logo">
+    <div class="nav-logo-icon">
+      <img src="assets/logo/slsg-logo.png" alt="SLSG Infosystems Logo">
+    </div>
+    <div class="nav-logo-text">
+      <span>SLSG Infosystems</span>
+      <span>Pvt. Ltd.</span>
+    </div>
+  </a>
+  <ul class="nav-links"><li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="index.html#partners">Partners</a></li>
+<li><a href="stories.html" aria-current="page">Stories</a></li>
+<li><a href="contact.html" class="nav-cta">Contact Us</a></li></ul>
+  <div class="nav-actions">
+    <button type="button" class="theme-toggle" id="themeToggle" aria-label="Dark mode" aria-pressed="false" title="Toggle dark mode">
+      <svg class="theme-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20.9 13.2A9 9 0 0 1 10.8 3.1 9 9 0 1 0 20.9 13.2Z"/></svg>
+      <svg class="theme-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4m0-14.2-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+    </button>
+  <button type="button" class="hamburger" id="menuBtn" onclick="toggleMenu()" aria-label="Toggle Navigation" aria-controls="mobileMenu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  </div>
+</nav><div class="mobile-menu" id="mobileMenu"><button class="mobile-close" onclick="toggleMenu()" aria-label="Close Menu">&times;</button><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="index.html#partners">Partners</a><a href="stories.html">Stories</a><a href="contact.html">Contact Us</a></div><main id="main-content" tabindex="-1"><header class="page-intro illustrated-intro"><div class="intro-copy"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Home</a> <span aria-hidden="true">/</span> <span aria-current="page">Stories &amp; insights</span></nav><div class="section-label">The SLSG journal</div><h1>Enterprise IT insights &amp; SLSG stories.</h1><p>Explore practical guides to IT infrastructure planning, hardware lifecycle management, and business-led technology decisions, alongside the story and principles behind SLSG Infosystems.</p></div><figure class="technology-art page-art"><svg viewBox="0 0 450 400" role="img" aria-label="Ideas taking shape in an open journal" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path class="art-panel" d="M54 148c58-17 118-12 169 14v166c-56-27-112-31-169-12Zm169 14c50-26 110-31 169-14v168c-57-15-114-11-169 12Z"/><path d="M223 170v151M75 180c44-9 86-4 126 13m-126 15c44-9 86-4 126 13m-126 15c30-5 58-3 81 4m90-47c39-17 81-22 126-13m-126 41c39-17 81-22 126-13"/><path class="art-accent" d="m279 289 66-67 17 17-66 67-27 10Z"/><path class="art-accent" d="m223 56 8 18 19 7-19 8-8 18-8-18-19-8 19-7Zm-91 40 4 10 11 4-11 4-4 11-4-11-11-4 11-4Z"/><path d="M191 135c-20-17-16-47 6-58m61 59c18-18 15-42 2-54"/></g></svg></figure></header><section class="stories-list" aria-label="Stories and articles"><div class="editorial-grid"><a class="editorial-card" href="story-our-beginning.html"><div class="technology-art story-cover" aria-hidden="true"><svg viewBox="0 0 450 400" role="presentation" aria-label="A shared foundation for future growth" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path class="art-panel" d="m93 215 128-64 135 64-135 68Z"/><path d="m93 215 1 47 128 66 134-66v-47m-134 68v45"/><path class="art-accent" d="M220 149V72m0 6 55 8-12 18 12 18-55-7"/><path class="art-panel" d="m102 163 36-19 36 19-36 19Z"/><path d="M102 163v25l36 19 36-19v-25m-36 19v25"/><path class="art-panel" d="m271 146 36-19 36 19-36 19Z"/><path d="M271 146v25l36 19 36-19v-25m-36 19v25"/><path class="art-accent" d="m65 91 6-14 6 14 14 6-14 6-6 14-6-14-14-6Zm299 227 5-11 5 11 11 5-11 5-5 11-5-11-11-5Z"/></g></svg></div><span class="section-label">Our story</span><h3>The SLSG story: experience behind enterprise technology</h3><p>Why SLSG brings operational discipline and human judgement to enterprise technology.</p><span class="text-link">Read story &rarr;</span></a><a class="editorial-card" href="story-technology-roadmap.html"><div class="technology-art story-cover" aria-hidden="true"><svg viewBox="0 0 450 400" role="presentation" aria-label="A clear path from business goals to delivery" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path class="art-wire" d="M78 299h68c51 0 12-106 65-106h55c56 0 10-104 67-104h41"/><circle class="art-panel" cx="78" cy="299" r="27"/><path class="art-accent" d="m65 299 10 10 17-22"/><circle class="art-panel" cx="233" cy="193" r="29"/><path class="art-accent" d="m219 193 11 11 18-23"/><circle class="art-panel" cx="373" cy="89" r="29"/><path class="art-accent" d="m360 89 10 10 18-22"/><rect class="art-panel" x="65" y="72" width="98" height="106" rx="9"/><path d="M84 95h59m-59 22h45m-45 22h55m-55 20h32"/><path class="art-accent" d="M318 310v-57h19v57m15 0v-86h19v86m15 0V194h19v116"/><path d="M301 321h114"/></g></svg></div><span class="section-label">Technology perspective</span><h3>How to plan an enterprise IT roadmap</h3><p>A practical approach to planning an enterprise technology roadmap.</p><span class="text-link">Read story &rarr;</span></a><a class="editorial-card" href="story-hardware-lifecycle.html"><div class="technology-art story-cover" aria-hidden="true"><svg viewBox="0 0 450 400" role="presentation" aria-label="A circular approach to the life of IT equipment" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path class="art-accent" d="M111 162a127 127 0 0 1 209-57m0 0-2-32m2 32-33 2M347 202a127 127 0 0 1-192 118m0 0 5 31m-5-31 32-5M133 302a127 127 0 0 1-29-104m0 0-26 17m26-17 15 29"/><rect class="art-panel" x="159" y="147" width="139" height="94" rx="8"/><path d="M171 160h115v67H171m55 15v24m-34 0h68"/><path class="art-accent" d="M230 211c-28-3-32-36 0-43 33 8 28 40 0 43Zm0-37v37m0-14-10-9m10 2 10-9"/><path d="M314 289h44v53h-44Z"/><path class="art-accent" d="M323 305h24m-24 12h24m-24 12h12"/></g></svg></div><span class="section-label">Responsible IT</span><h3>IT hardware lifecycle management: a practical guide</h3><p>Think beyond procurement: support, useful life, data handling, and responsible retirement.</p><span class="text-link">Read story &rarr;</span></a></div></section><section class="page-cta"><div><div class="section-label">Let’s move forward</div><h2>Planning an IT infrastructure or cloud project?</h2><p>Discuss your requirements, existing systems, locations, and support needs with our Pune team.</p></div><a class="btn-primary" href="contact.html">Talk to our team &rarr;</a></section></main><footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="nav-logo" style="margin-bottom:0">
+        <div class="nav-logo-icon">
+          <img src="assets/logo/slsg-logo.png" alt="SLSG Infosystems">
+        </div>
+        <div class="nav-logo-text">
+          <span>SLSG Infosystems</span>
+          <span>Pvt. Ltd.</span>
+        </div>
+      </div>
+      <p>Enterprise Technology &amp; Business Transformation Partner helping organizations adopt the right technologies, strengthen infrastructure, and stay compliant across India since 2023.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Enterprise Portfolios</h4>
+      <ul>
+        <li><a href="services.html#cloud-consulting">Digital &amp; Cloud Transformation</a></li>
+        <li><a href="services.html#security-solutions">Security &amp; Compliance</a></li>
+        <li><a href="services.html#e-waste-management">Sustainability &amp; E-Waste</a></li>
+        <li><a href="services.html#managed-it-services">Managed IT Services (AMC)</a></li>
+        <li><a href="services.html#workforce-mobility">Workforce &amp; Mobility (AV &amp; AIDC)</a></li>
+        <li><a href="services.html#it-infrastructure">Enterprise IT Infrastructure</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Technology Alliances</h4>
+      <ul>
+        <li><a href="index.html#partners">Tata Communications</a></li>
+        <li><a href="index.html#partners">Yotta Data Services</a></li>
+        <li><a href="index.html#partners">Ingram Micro</a></li>
+        <li><a href="index.html#partners">Hewlett Packard Enterprise</a></li>
+        <li><a href="index.html#partners">Zebra Technologies</a></li>
+        <li><a href="index.html#partners">Techknowgreen Solutions</a></li>
+        <li><a href="index.html#partners">PeopleLink &amp; SonicWall</a></li>
+        <li><a href="index.html#partners">Staqo Enterprise</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Explore SLSG</h4>
+      <ul>
+        <li><a href="about.html">About SLSG</a></li><li><a href="stories.html">Stories &amp; Insights</a></li>
+        <li><a href="about.html#leadership">Leadership Team</a></li>
+        <li><a href="about.html#awards">Awards 2026 Milestone</a></li>
+        <li><a href="services.html#framework">Delivery Framework</a></li>
+        <li><a href="index.html#clients">Client Portfolio</a></li>
+        <li><a href="contact.html#locations">Office Locations</a></li>
+        <li><a href="contact.html#contact">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2026 <span>SLSG Infosystems Pvt. Ltd.</span> — All rights reserved.</p>
+    <p style="font-size:11px;letter-spacing:1px"><a href="https://slsginfosystem.com" style="color:inherit;text-decoration:none">HTTPS://SLSGINFOSYSTEM.COM</a></p>
+  </div>
+</footer>
+<script src="assets/theme.js" defer></script>
+<script src="assets/site.js" defer></script>
+</body>
+</html>
