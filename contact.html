@@ -34,6 +34,25 @@
 <meta name="twitter:title" content="Contact SLSG Infosystems | Kharadi &amp; Katraj, Pune">
 <meta name="twitter:description" content="Contact SLSG Infosystems for enterprise IT and cloud solutions. Find our Kharadi and Katraj offices in Pune, phone numbers and service enquiry form.">
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "ContactPage", "@id": "https://slsginfosystem.com/contact.html#webpage", "url": "https://slsginfosystem.com/contact.html", "name": "Contact SLSG Infosystems | Kharadi & Katraj, Pune", "description": "Contact SLSG Infosystems for enterprise IT and cloud solutions. Find our Kharadi and Katraj offices in Pune, phone numbers and service enquiry form.", "inLanguage": "en", "isPartOf": {"@id": "https://slsginfosystem.com/#website"}, "publisher": {"@id": "https://slsginfosystem.com/#organization"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://slsginfosystem.com/"}, {"@type": "ListItem", "position": 2, "name": "Contact", "item": "https://slsginfosystem.com/contact.html"}]}]}</script>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/logo/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/logo/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/logo/apple-touch-icon.png">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="author" content="SLSG Infosystems Pvt. Ltd.">
+<meta property="og:locale" content="en_IN">
+<meta property="og:image" content="https://slsginfosystem.com/assets/logo/slsg-logo.png">
+<meta property="og:image:alt" content="SLSG Infosystems logo">
+<meta name="twitter:image" content="https://slsginfosystem.com/assets/logo/slsg-logo.png">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WZ0Q5E4KTD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WZ0Q5E4KTD');
+</script>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to content</a>
@@ -92,7 +111,27 @@
         </div>
         <div class="form-group" id="groupPhone">
           <label for="formPhone">Phone Number *</label>
-          <input type="tel" id="formPhone" name="Phone_Number" placeholder="+91 00000 00000" required>
+          <div class="phone-input-group" id="phoneInputGroup">
+            <div class="country-picker" title="Select Country Code">
+              <select id="countrySelect" aria-label="Select Country Code">
+                <!-- Populated dynamically via JS with flags, dial codes, and country names -->
+              </select>
+              <div class="country-display" id="countryDisplay" aria-hidden="true">
+                <img class="country-flag-img" id="countryFlagImg" src="https://flagcdn.com/24x18/in.png" alt="India flag" width="20" height="14" onerror="this.style.display='none'; document.getElementById('countryFlag').style.display='inline';">
+                <span class="country-flag" id="countryFlag" style="display:none;">🇮🇳</span>
+                <span class="country-code-text" id="countryCodeText">+91</span>
+                <span class="country-arrow">&#9662;</span>
+              </div>
+            </div>
+            <input type="tel" id="formPhone" name="Phone_Number" placeholder="98765 43210" required autocomplete="tel-national">
+          </div>
+          <input type="hidden" name="Country_Name" id="countryNameInput" value="India">
+          <input type="hidden" name="Country_Dial_Code" id="countryDialInput" value="+91">
+          <input type="hidden" name="Full_International_Phone" id="fullPhoneInput" value="">
+          <div class="phone-hint" id="phoneHint">
+            <span id="phoneHintText">India: 10 digits required</span>
+            <span id="phoneCounter">0/10</span>
+          </div>
         </div>
       </div>
       <div class="form-group" id="groupService">
