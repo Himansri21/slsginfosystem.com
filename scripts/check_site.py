@@ -9,7 +9,7 @@ class Page(HTMLParser):
         super().__init__()
         self.path, self.ids, self.links, self.errors = path, set(), [], []
         self.h1 = self.main = 0
-        self.feed(path.read_text())
+        self.feed(path.read_text(encoding='utf-8'))
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
         if tag == 'h1': self.h1 += 1
