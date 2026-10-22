@@ -34,7 +34,7 @@ class Metadata(HTMLParser):
 
 titles, descriptions, urls = set(), set(), set()
 for path in ROOT.glob('*.html'):
-    page = Metadata(path.read_text())
+    page = Metadata(path.read_text(encoding='utf-8'))
     assert len(page.titles) == len(page.descriptions) == len(page.canonicals) == len(page.schemas) == 1, path.name
     assert page.titles[0] not in titles and page.descriptions[0] not in descriptions, path.name
     titles.add(page.titles[0]); descriptions.add(page.descriptions[0])
@@ -53,5 +53,7 @@ for path in ROOT.glob('*.html'):
                 assert (ROOT / target).is_file(), target
 sitemap = ET.parse(ROOT / 'sitemap.xml')
 assert {n.text for n in sitemap.findall('.//{*}loc')} == urls
-assert BASE + 'sitemap.xml' in (ROOT / 'robots.txt').read_text()
+assert len(sitemap.findall('.//{*}lastmod')) == len(urls)
+assert len(sitemap.findall('.//{*}priority')) == len(urls)
+assert BASE + 'sitemap.xml' in (ROOT / 'robots.txt').read_text(encoding='utf-8')
 print(f'Passed: {len(urls)} unique titles/descriptions, production canonicals, JSON-LD, breadcrumb targets, and sitemap coverage.')

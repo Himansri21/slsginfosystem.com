@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /scripts/
+Disallow: /scratch/
+Disallow: /docs/
 
 Sitemap: https://slsginfosystem.com/sitemap.xml
